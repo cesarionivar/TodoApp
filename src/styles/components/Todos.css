@@ -1,0 +1,36 @@
+.todos__body {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.todos__body > h2 {
+  margin: 2rem 0rem;
+  border-bottom: 1px solid #535353f1;
+  padding: .5rem 0rem;
+}
+
+.todos__container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.todoList {
+  background-color: white;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.todoList__container {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 10px;;
+}
+
+.todoList > h3 {
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 1px solid lightgray;
+}

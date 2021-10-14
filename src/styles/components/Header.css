@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--fore-color);
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__right > a {
+  color: var(--fore-color);
+  text-decoration: none;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.header__right > a:hover {
+  background-color: var(--primary-colorHover);
+}

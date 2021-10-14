@@ -1,0 +1,43 @@
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+}
+
+.todo:nth-of-type(even) {
+  background-color: #f2f2f2;
+  
+}
+
+.todo.complete > p{
+  text-decoration: line-through;
+}
+
+.todo > p {
+  flex: 1;
+  cursor: pointer;
+}
+
+.todo__buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.todo__buttons > span {
+  background-color: var(--edit-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo__buttons > span:first-child {
+  background-color: var(--edit-color);
+}
+
+.todo__buttons > span:last-child {
+  background-color: var(--danger-color);
+}

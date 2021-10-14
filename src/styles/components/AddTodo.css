@@ -1,0 +1,44 @@
+.addTodo {
+  background-color: var(--fore-color);
+  flex: 0.5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px black;
+}
+
+.addTodo > h2 {
+  padding: 20px 20px 10px 20px;
+  background-color: #f2f2f2;
+  color: black;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.addTodo > form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.addTodo > form > input {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  outline-color: var(--primary-color);
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.addTodo > form > button {
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: var(--primary-color);
+  color: var(--fore-color);
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: flex-end;
+  border-radius: 5px;
+}
+
+.addTodo > form > button:hover {
+  background-color: var(--primary-colorHover);
+}

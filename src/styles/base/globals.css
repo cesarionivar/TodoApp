@@ -1,0 +1,38 @@
+:root {
+  --primary-color: #007bff;
+  --primary-colorHover: #015dbe;
+  --edit-color: #28a745;
+  --danger-color: #dc3545;
+  --bg-color: #343a40;
+  --fore-color: #fff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', 'Oxygen', sans-serif;
+  background: linear-gradient( var(--fore-color),#9198e5);
+  overflow: hidden;
+  height: 100vh;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
