@@ -5,11 +5,9 @@ import AppRouter from './routers/AppRouter';
 
 const TodoApp = () => {
   return (
-    <div className='app'>
-      <Provider store={store}>
-        <AppRouter />
-      </Provider>
-    </div>
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
   );
 };
 

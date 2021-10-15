@@ -1,10 +1,16 @@
 import { types } from '../types/types';
 
 const initialState = {
+  activeTodo: null,
   todos: [
     {
       id: 123,
       title: 'Wake up early',
+      complete: false,
+    },
+    {
+      id: 123345,
+      title: 'Configure firebase',
       complete: false,
     },
   ],
@@ -32,6 +38,23 @@ export const todoReducer = (state = initialState, action) => {
       return {
         ...state,
         todos: state.todos.filter((todo) => todo.id !== action.payload && todo),
+      };
+
+    case types.setEditTodo:
+      return {
+        ...state,
+        activeTodo: action.payload,
+      };
+
+    case types.editTodo:
+      return {
+        ...state,
+        todos: state.todos.map((todo) =>
+          todo.id === action.payload.id
+            ? { ...todo, title: action.payload.title }
+            : todo
+        ),
+        activeTodo: null,
       };
 
     default:
