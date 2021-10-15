@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addNewTodo } from '../../actions/todos';
 
 const AddTodo = () => {
   const [todo, setTodo] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Todo >> ', todo);
+
+    const newTodo = {
+      id: new Date().getTime(),
+      title: todo,
+      complete: false,
+    };
+
+    dispatch(addNewTodo(newTodo));
 
     setTodo('');
   };

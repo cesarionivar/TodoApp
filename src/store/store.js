@@ -5,7 +5,7 @@ import rootReducer from '../reducers/rootReducer';
 const composeEnhancers =
   (typeof window !== 'undefined' &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
-  composeEnhancers;
+  compose;
 
 const store = createStore(
   rootReducer,

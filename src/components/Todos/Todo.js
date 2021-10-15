@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteTodo, setCompleteTodo } from '../../actions/todos';
 
-const Todo = () => {
-  const [complete, setComplete] = useState(false);
+const Todo = ({ todo: { id, title, complete } }) => {
+  const dispatch = useDispatch();
 
   const handleComplete = () => {
-    setComplete(!complete);
+    dispatch(setCompleteTodo(id));
+  };
+
+  const handleDelete = () => {
+    dispatch(deleteTodo(id));
   };
 
   return (
     <div className={`todo ${complete && 'complete'}`}>
-      <p onClick={handleComplete}>Wakeup at 5:00 am</p>
+      <p onClick={handleComplete}>{title}</p>
       <div className='todo__buttons'>
         <span>Edit</span>
-        <span>Delete</span>
+        <span onClick={handleDelete}>Delete</span>
       </div>
     </div>
   );
