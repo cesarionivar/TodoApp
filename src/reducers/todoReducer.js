@@ -2,18 +2,7 @@ import { types } from '../types/types';
 
 const initialState = {
   activeTodo: null,
-  todos: [
-    {
-      id: 123,
-      title: 'Wake up early',
-      complete: false,
-    },
-    {
-      id: 123345,
-      title: 'Configure firebase',
-      complete: false,
-    },
-  ],
+  todos: [],
 };
 
 export const todoReducer = (state = initialState, action) => {
